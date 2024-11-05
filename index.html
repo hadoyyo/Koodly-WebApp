@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Koodly</title>
+        <link rel="icon" href="/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="assets/aos/aos.css" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-light fixed-top shadow-lg" id="mainNav">
+            <div class="container px-5">
+                <a class="navbar-brand fw-bold" href="#page-top"><img id="logo" src="" height="45px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:rgb(41, 204, 87)">
+                    Menu
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="przepisy.html"><i class="bi bi-list-ul"></i> Wszystkie przepisy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Title below navbar -->
+        <section class="text-center" style="background-color: hsl(160, 3%, 20%); margin-top: 80px; color:white">
+            <h1 data-aos="zoom-in" data-aos-duration="1000">Wybierz składniki</h1>
+        </section>
+
+        <!-- Main content section -->
+        <div class="tabs">
+            <div class="tab first-tab active" onclick="showTab('dry')" data-icon="🧂" data-aos="fade-down" data-aos-duration="1000"><span>Sypkie 🧂</span></div>
+            <div class="tab" onclick="showTab('liquid')" data-icon="💧" data-aos="fade-down" data-aos-duration="1200"><span>Płynne 💧</span></div>
+            <div class="tab" onclick="showTab('dairy')" data-icon="🧀" data-aos="fade-down" data-aos-duration="1400"><span>Nabiał 🧀</span></div>
+            <div class="tab" onclick="showTab('meat')" data-icon="🥩" data-aos="fade-down" data-aos-duration="1600"><span>Mięsne 🥩</span></div>
+            <div class="tab" onclick="showTab('vege')" data-icon="🍇" data-aos="fade-down" data-aos-duration="1800"><span>Owoce i warzywa 🍇</span></div>
+            <div class="tab" onclick="showTab('other')" data-icon="🥐" data-aos="fade-down" data-aos-duration="2000"><span>Pozostałe 🥐</span></div>
+        </div>
+        <section class="custom-section shadow" data-aos="fade-down" data-aos-duration="800">
+            <!-- Zakładka "Produkty sypkie" -->
+            <div id="dry" class="p-4 tab-content active ms-5 me-4 mb-4">
+                <!-- Search container in each tab -->
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>               
+                <h4 class="mb-4">Sypkie</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bułka tarta" id="bułka tarta" class="product">
+                            <label class="form-check-label" for="bułka tarta">bułka tarta</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="chili" id="chili" class="product">
+                            <label class="form-check-label" for="chili">chili</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukier" id="cukier" class="product">
+                            <label class="form-check-label" for="cukier">cukier</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukier brązowy" id="cukier brązowy" class="product">
+                            <label class="form-check-label" for="cukier brązowy">cukier brązowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukier cynamonowy" id="cukier cynamonowy" class="product">
+                            <label class="form-check-label" for="cukier cynamonowy">cukier cynamonowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukier puder" id="cukier puder" class="product">
+                            <label class="form-check-label" for="cukier puder">cukier puder</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukier wanilinowy" id="cukier wanilinowy" class="product">
+                            <label class="form-check-label" for="cukier wanilinowy">cukier wanilinowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cynamon" id="cynamon" class="product">
+                            <label class="form-check-label" for="cynamon">cynamon</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="czosnek w proszku" id="czosnek w proszku" class="product">
+                            <label class="form-check-label" for="czosnek w proszku">czosnek w proszku</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="galaretka" id="galaretka" class="product">
+                            <label class="form-check-label" for="galaretka">galaretka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="gałka muszkatołowa" id="gałka muszkatołowa" class="product">
+                            <label class="form-check-label" for="gałka muszkatołowa">gałka muszkatołowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kakao" id="kakao" class="product">
+                            <label class="form-check-label" for="kakao">kakao</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kasza gryczana" id="kasza gryczana" class="product">
+                            <label class="form-check-label" for="kasza gryczana">kasza gryczana</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kawa" id="kawa" class="product">
+                            <label class="form-check-label" for="kawa">kawa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kmin rzymski" id="kmin rzymski" class="product">
+                            <label class="form-check-label" for="kmin rzymski">kmin rzymski</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="majeranek" id="majeranek" class="product">
+                            <label class="form-check-label" for="majeranek">majeranek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mak" id="mak" class="product">
+                            <label class="form-check-label" for="mak">mak</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mąka" id="mąka" class="product">
+                            <label class="form-check-label" for="mąka">mąka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mąka migdałowa" id="mąka migdałowa" class="product">
+                            <label class="form-check-label" for="mąka migdałowa">mąka migdałowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mąka ryżowa" id="mąka ryżowa" class="product">
+                            <label class="form-check-label" for="mąka ryżowa">mąka ryżowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mąka ziemniaczana" id="mąka ziemniaczana" class="product">
+                            <label class="form-check-label" for="mąka ziemniaczana">mąka ziemniaczana</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="nasiona chia" id="nasiona chia" class="product">
+                            <label class="form-check-label" for="nasiona chia">nasiona chia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="oregano" id="oregano" class="product">
+                            <label class="form-check-label" for="oregano">oregano</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="papryka mielona" id="papryka mielona" class="product">
+                            <label class="form-check-label" for="papryka mielona">papryka mielona</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pieprz" id="pieprz" class="product">
+                            <label class="form-check-label" for="pieprz">pieprz</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pieprz cayenne" id="pieprz cayenne" class="product">
+                            <label class="form-check-label" for="pieprz cayenne">pieprz cayenne</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pieprz ziołowy" id="pieprz ziołowy" class="product">
+                            <label class="form-check-label" for="pieprz ziołowy">pieprz ziołowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="płatki owsiane" id="płatki owsiane" class="product">
+                            <label class="form-check-label" for="płatki owsiane">płatki owsiane</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="proszek do pieczenia" id="proszek do pieczenia" class="product">
+                            <label class="form-check-label" for="proszek do pieczenia">proszek do pieczenia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="przyprawa gyros" id="przyprawa gyros" class="product">
+                            <label class="form-check-label" for="przyprawa gyros">przyprawa gyros</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ryż" id="ryż" class="product">
+                            <label class="form-check-label" for="ryż">ryż</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ryż arborio" id="ryż arborio" class="product">
+                            <label class="form-check-label" for="ryż arborio">ryż arborio</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sezam" id="sezam" class="product">
+                            <label class="form-check-label" for="sezam">sezam</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="skrobia kukurydziana" id="skrobia kukurydziana" class="product">
+                            <label class="form-check-label" for="skrobia kukurydziana">skrobia kukurydziana</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="soda" id="soda" class="product">
+                            <label class="form-check-label" for="soda">soda</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sól" id="sól" class="product">
+                            <label class="form-check-label" for="sól">sól</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sól morska" id="sól morska" class="product">
+                            <label class="form-check-label" for="sól morska">sól morska</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="żelatyna" id="żelatyna" class="product">
+                            <label class="form-check-label" for="żelatyna">żelatyna</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zakładka "Produkty płynne" -->
+            <div id="liquid" class="p-4 tab-content ms-5 me-4 mb-4">
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>                              
+                <h4 class="mb-4">Płynne</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bulion drobiowy" id="bulion drobiowy" class="product">
+                            <label class="form-check-label" for="bulion drobiowy">bulion drobiowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bulion warzywny" id="bulion warzywny" class="product">
+                            <label class="form-check-label" for="bulion warzywny">bulion warzywny</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bulion wieprzowy" id="bulion wieprzowy" class="product">
+                            <label class="form-check-label" for="bulion wieprzowy">bulion wieprzowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bulion wołowy" id="bulion wołowy" class="product">
+                            <label class="form-check-label" for="bulion wołowy">bulion wołowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ganache" id="ganache" class="product">
+                            <label class="form-check-label" for="ganache">ganache</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ketchup" id="ketchup" class="product">
+                            <label class="form-check-label" for="ketchup">ketchup</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="koncentrat pomidorowy" id="koncentrat pomidorowy" class="product">
+                            <label class="form-check-label" for="koncentrat pomidorowy">koncentrat pomidorowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="musztarda" id="musztarda" class="product">
+                            <label class="form-check-label" for="musztarda">musztarda</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ocet" id="ocet" class="product">
+                            <label class="form-check-label" for="ocet">ocet</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ocet ryżowy" id="ocet ryżowy" class="product">
+                            <label class="form-check-label" for="ocet ryżowy">ocet ryżowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ocet winny" id="ocet winny" class="product">
+                            <label class="form-check-label" for="ocet winny">ocet winny</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="olej rzepakowy" id="olej rzepakowy" class="product">
+                            <label class="form-check-label" for="olej rzepakowy">olej rzepakowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="olej sezamowy" id="olej sezamowy" class="product">
+                            <label class="form-check-label" for="olej sezamowy">olej sezamowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="oliwa" id="oliwa" class="product">
+                            <label class="form-check-label" for="oliwa">oliwa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="passata pomidorowa" id="passata pomidorowa" class="product">
+                            <label class="form-check-label" for="passata pomidorowa">passata pomidorowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="piwo" id="piwo" class="product">
+                            <label class="form-check-label" for="piwo">piwo</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sok z cytryny" id="sok z cytryny" class="product">
+                            <label class="form-check-label" for="sok z cytryny">sok z cytryny</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos beszamelowy" id="sos beszamelowy" class="product">
+                            <label class="form-check-label" for="sos beszamelowy">sos beszamelowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos cezar" id="sos cezar" class="product">
+                            <label class="form-check-label" for="sos cezar">sos cezar</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos czosnkowy" id="sos czosnkowy" class="product">
+                            <label class="form-check-label" for="sos czosnkowy">sos czosnkowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos hoisin" id="sos hoisin" class="product">
+                            <label class="form-check-label" for="sos hoisin">sos hoisin</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos holenderski" id="sos holenderski" class="product">
+                            <label class="form-check-label" for="sos holenderski">sos holenderski</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos pomidorowy" id="sos pomidorowy" class="product">
+                            <label class="form-check-label" for="sos pomidorowy">sos pomidorowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sos sojowy" id="sos sojowy" class="product">
+                            <label class="form-check-label" for="sos sojowy">sos sojowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="syrop klonowy" id="syrop klonowy" class="product">
+                            <label class="form-check-label" for="syrop klonowy">syrop klonowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="tahini" id="tahini" class="product">
+                            <label class="form-check-label" for="tahini">tahini</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="wino białe" id="wino białe" class="product">
+                            <label class="form-check-label" for="wino białe">wino białe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="wino czerwone" id="wino czerwone" class="product">
+                            <label class="form-check-label" for="wino czerwone">wino czerwone</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="woda" id="woda" class="product">
+                            <label class="form-check-label" for="woda">woda</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="woda gazowana" id="woda gazowana" class="product">
+                            <label class="form-check-label" for="woda gazowana">woda gazowana</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="zakwas na barszcz" id="zakwas na barszcz" class="product">
+                            <label class="form-check-label" for="zakwas na barszcz">zakwas na barszcz</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dairy" class="p-4 tab-content ms-5 me-4 mb-4">
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>                   
+                <h4 class="mb-4">Nabiał</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bita śmietana" id="bita śmietana" class="product">
+                            <label class="form-check-label" for="bita śmietana">bita śmietana</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="jajka" id="jajka" class="product">
+                            <label class="form-check-label" for="jajka">jajka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="jogurt" id="jogurt" class="product">
+                            <label class="form-check-label" for="jogurt">jogurt</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="majonez" id="majonez" class="product">
+                            <label class="form-check-label" for="majonez">majonez</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mascarpone" id="mascarpone" class="product">
+                            <label class="form-check-label" for="mascarpone">mascarpone</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="masło" id="masło" class="product">
+                            <label class="form-check-label" for="masło">masło</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="maślanka" id="maślanka" class="product">
+                            <label class="form-check-label" for="maślanka">maślanka</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mleko" id="mleko" class="product">
+                            <label class="form-check-label" for="mleko">mleko</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mleko skondensowane" id="mleko skondensowane" class="product">
+                            <label class="form-check-label" for="mleko skondensowane">mleko skondensowane</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mozzarella biała" id="mozzarella biała" class="product">
+                            <label class="form-check-label" for="mozzarella biała">mozzarella biała</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mozzarella żółta" id="mozzarella żółta" class="product">
+                            <label class="form-check-label" for="mozzarella żółta">mozzarella żółta</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="parmezan" id="parmezan" class="product">
+                            <label class="form-check-label" for="parmezan">parmezan</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ser cheddar" id="ser cheddar" class="product">
+                            <label class="form-check-label" for="ser cheddar">ser cheddar</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ser grana padano" id="ser grana padano" class="product">
+                            <label class="form-check-label" for="ser grana padano">ser grana padano</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ser twarogowy" id="ser twarogowy" class="product">
+                            <label class="form-check-label" for="ser twarogowy">ser twarogowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ser żółty" id="ser żółty" class="product">
+                            <label class="form-check-label" for="ser żółty">ser żółty</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="serek śmietankowy" id="serek śmietankowy" class="product">
+                            <label class="form-check-label" for="serek śmietankowy">serek śmietankowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="śmietana" id="śmietana" class="product">
+                            <label class="form-check-label" for="śmietana">śmietana</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="śmietana kremówka" id="śmietana kremówka" class="product">
+                            <label class="form-check-label" for="śmietana kremówka">śmietana kremówka</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="meat" class="p-4 tab-content ms-5 me-4 mb-4">
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>                   
+                <h4 class="mb-4">Mięsne</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bekon" id="bekon" class="product">
+                            <label class="form-check-label" for="bekon">bekon</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="boczek" id="boczek" class="product">
+                            <label class="form-check-label" for="boczek">boczek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kiełbasa" id="kiełbasa" class="product">
+                            <label class="form-check-label" for="kiełbasa">kiełbasa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="krewetki" id="krewetki" class="product">
+                            <label class="form-check-label" for="krewetki">krewetki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="łopatka wieprzowa" id="łopatka wieprzowa" class="product">
+                            <label class="form-check-label" for="łopatka wieprzowa">łopatka wieprzowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="łopatka wołowa" id="łopatka wołowa" class="product">
+                            <label class="form-check-label" for="łopatka wołowa">łopatka wołowa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="łosoś" id="łosoś" class="product">
+                            <label class="form-check-label" for="łosoś">łosoś</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makrela" id="makrela" class="product">
+                            <label class="form-check-label" for="makrela">makrela</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mięso mielone wieprzowe" id="mięso mielone wieprzowe" class="product">
+                            <label class="form-check-label" for="mięso mielone wieprzowe">mięso mielone wieprzowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mięso mielone wieprzowo-wołowe" id="mięso mielone wieprzowo-wołowe" class="product">
+                            <label class="form-check-label" for="mięso mielone wieprzowo-wołowe">mięso mielone wieprzowo-wołowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mięso mielone wołowe" id="mięso mielone wołowe" class="product">
+                            <label class="form-check-label" for="mięso mielone wołowe">mięso mielone wołowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mintaj" id="mintaj" class="product">
+                            <label class="form-check-label" for="mintaj">mintaj</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="parówki" id="parówki" class="product">
+                            <label class="form-check-label" for="parówki">parówki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pierś z kurczaka" id="pierś z kurczaka" class="product">
+                            <label class="form-check-label" for="pierś z kurczaka">pierś z kurczaka</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="salami" id="salami" class="product">
+                            <label class="form-check-label" for="salami">salami</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="schab wieprzowy" id="schab wieprzowy" class="product">
+                            <label class="form-check-label" for="schab wieprzowy">schab wieprzowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="skrzydełka z kurczaka" id="skrzydełka z kurczaka" class="product">
+                            <label class="form-check-label" for="skrzydełka z kurczaka">skrzydełka z kurczaka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="szynka" id="szynka" class="product">
+                            <label class="form-check-label" for="szynka">szynka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="udko kurczaka" id="udko kurczaka" class="product">
+                            <label class="form-check-label" for="udko kurczaka">udko kurczaka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="żeberka wieprzowe" id="żeberka wieprzowe" class="product">
+                            <label class="form-check-label" for="żeberka wieprzowe">żeberka wieprzowe</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vege" class="p-4 tab-content ms-5 me-4 mb-4">
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>                   
+                <h4 class="mb-4">Warzywa i owoce</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="awokado" id="awokado" class="product">
+                            <label class="form-check-label" for="awokado">awokado</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="banan" id="banan" class="product">
+                            <label class="form-check-label" for="banan">banan</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="borowiki" id="borowiki" class="product">
+                            <label class="form-check-label" for="borowiki">borowiki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="borówki" id="borówki" class="product">
+                            <label class="form-check-label" for="borówki">borówki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="brokuł" id="brokuł" class="product">
+                            <label class="form-check-label" for="brokuł">brokuł</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="buraki" id="buraki" class="product">
+                            <label class="form-check-label" for="buraki">buraki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cebula" id="cebula" class="product">
+                            <label class="form-check-label" for="cebula">cebula</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cukinia" id="cukinia" class="product">
+                            <label class="form-check-label" for="cukinia">cukinia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="cytryna" id="cytryna" class="product">
+                            <label class="form-check-label" for="cytryna">cytryna</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="czosnek" id="czosnek" class="product">
+                            <label class="form-check-label" for="czosnek">czosnek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="dynia" id="dynia" class="product">
+                            <label class="form-check-label" for="dynia">dynia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="fasola biała" id="fasola biała" class="product">
+                            <label class="form-check-label" for="fasola biała">fasola biała</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="fasola czerwona" id="fasola czerwona" class="product">
+                            <label class="form-check-label" for="fasola czerwona">fasola czerwona</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="granat" id="granat" class="product">
+                            <label class="form-check-label" for="granat">granat</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="imbir" id="imbir" class="product">
+                            <label class="form-check-label" for="imbir">imbir</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="jabłko" id="jabłko" class="product">
+                            <label class="form-check-label" for="jabłko">jabłko</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kalafior" id="kalafior" class="product">
+                            <label class="form-check-label" for="kalafior">kalafior</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kapusta" id="kapusta" class="product">
+                            <label class="form-check-label" for="kapusta">kapusta</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="koperek" id="koperek" class="product">
+                            <label class="form-check-label" for="koperek">koperek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kukurydza" id="kukurydza" class="product">
+                            <label class="form-check-label" for="kukurydza">kukurydza</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="limonka" id="limonka" class="product">
+                            <label class="form-check-label" for="limonka">limonka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="maliny" id="maliny" class="product">
+                            <label class="form-check-label" for="maliny">maliny</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="marchewka" id="marchewka" class="product">
+                            <label class="form-check-label" for="marchewka">marchewka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="mięta" id="mięta" class="product">
+                            <label class="form-check-label" for="mięta">mięta</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ogórek" id="ogórek" class="product">
+                            <label class="form-check-label" for="ogórek">ogórek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ogórek kiszony" id="ogórek kiszony" class="product">
+                            <label class="form-check-label" for="ogórek kiszony">ogórek kiszony</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ogórek konserwowy" id="ogórek konserwowy" class="product">
+                            <label class="form-check-label" for="ogórek konserwowy">ogórek konserwowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="oliwki" id="oliwki" class="product">
+                            <label class="form-check-label" for="oliwki">oliwki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="papryczki jalapeño" id="papryczki jalapeño" class="product">
+                            <label class="form-check-label" for="papryczki jalapeño">papryczki jalapeño</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="papryka" id="papryka" class="product">
+                            <label class="form-check-label" for="papryka">papryka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pieczarki" id="pieczarki" class="product">
+                            <label class="form-check-label" for="pieczarki">pieczarki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pietruszka" id="pietruszka" class="product">
+                            <label class="form-check-label" for="pietruszka">pietruszka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pomarańcza" id="pomarańcza" class="product">
+                            <label class="form-check-label" for="pomarańcza">pomarańcza</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pomidor" id="pomidor" class="product">
+                            <label class="form-check-label" for="pomidor">pomidor</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pomidorki koktajlowe" id="pomidorki koktajlowe" class="product">
+                            <label class="form-check-label" for="pomidorki koktajlowe">pomidorki koktajlowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pomidory z puszki" id="pomidory z puszki" class="product">
+                            <label class="form-check-label" for="pomidory z puszki">pomidory z puszki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="rukola" id="rukola" class="product">
+                            <label class="form-check-label" for="rukola">rukola</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="rzeżucha" id="rzeżucha" class="product">
+                            <label class="form-check-label" for="rzeżucha">rzeżucha</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sałata" id="sałata" class="product">
+                            <label class="form-check-label" for="sałata">sałata</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="sałata rzymska" id="sałata rzymska" class="product">
+                            <label class="form-check-label" for="sałata rzymska">sałata rzymska</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="seler" id="seler" class="product">
+                            <label class="form-check-label" for="seler">seler</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="seler naciowy" id="seler naciowy" class="product">
+                            <label class="form-check-label" for="seler naciowy">seler naciowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="suszone pomidory" id="suszone pomidory" class="product">
+                            <label class="form-check-label" for="suszone pomidory">suszone pomidory</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="szczaw" id="szczaw" class="product">
+                            <label class="form-check-label" for="szczaw">szczaw</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="szczypior" id="szczypior" class="product">
+                            <label class="form-check-label" for="szczypior">szczypior</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="szpinak" id="szpinak" class="product">
+                            <label class="form-check-label" for="szpinak">szpinak</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="truskawki" id="truskawki" class="product">
+                            <label class="form-check-label" for="truskawki">truskawki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ziemniaki" id="ziemniaki" class="product">
+                            <label class="form-check-label" for="ziemniaki">ziemniaki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="żurawina" id="żurawina" class="product">
+                            <label class="form-check-label" for="żurawina">żurawina</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="other" class="p-4 tab-content ms-5 me-4 mb-4">
+                <div class="search-container text-center p-3 mb-4">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Wyszukaj..." onkeyup="searchIngredients()" class="ingredientSearch form-control mx-auto d-inline"/>
+                </div>                   
+                <h4 class="mb-4">Pozostałe</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bagietka" id="bagietka" class="product">
+                            <label class="form-check-label" for="bagietka">bagietka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bajgiel" id="bajgiel" class="product">
+                            <label class="form-check-label" for="bajgiel">bajgiel</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bazylia" id="bazylia" class="product">
+                            <label class="form-check-label" for="bazylia">bazylia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="biszkopty" id="biszkopty" class="product">
+                            <label class="form-check-label" for="biszkopty">biszkopty</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bułka" id="bułka" class="product">
+                            <label class="form-check-label" for="bułka">bułka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bułka do hot-doga" id="bułka do hot-doga" class="product">
+                            <label class="form-check-label" for="bułka do hot-doga">bułka do hot-doga</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="bułka paryska" id="bułka paryska" class="product">
+                            <label class="form-check-label" for="bułka paryska">bułka paryska</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="chleb" id="chleb" class="product">
+                            <label class="form-check-label" for="chleb">chleb</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="chleb panini" id="chleb panini" class="product">
+                            <label class="form-check-label" for="chleb panini">chleb panini</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="chleb tostowy" id="chleb tostowy" class="product">
+                            <label class="form-check-label" for="chleb tostowy">chleb tostowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ciecierzyca" id="ciecierzyca" class="product">
+                            <label class="form-check-label" for="ciecierzyca">ciecierzyca</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="czekolada biała" id="czekolada biała" class="product">
+                            <label class="form-check-label" for="czekolada biała">czekolada biała</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="czekolada gorzka" id="czekolada gorzka" class="product">
+                            <label class="form-check-label" for="czekolada gorzka">czekolada gorzka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="czekolada mleczna" id="czekolada mleczna" class="product">
+                            <label class="form-check-label" for="czekolada mleczna">czekolada mleczna</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="drożdże" id="drożdże" class="product">
+                            <label class="form-check-label" for="drożdże">drożdże</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="dżem" id="dżem" class="product">
+                            <label class="form-check-label" for="dżem">dżem</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="guacamole" id="guacamole" class="product">
+                            <label class="form-check-label" for="guacamole">guacamole</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="herbatniki" id="herbatniki" class="product">
+                            <label class="form-check-label" for="herbatniki">herbatniki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="kolendra" id="kolendra" class="product">
+                            <label class="form-check-label" for="kolendra">kolendra</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="liść laurowy" id="liść laurowy" class="product">
+                            <label class="form-check-label" for="liść laurowy">liść laurowy</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="lód" id="lód" class="product">
+                            <label class="form-check-label" for="lód">lód</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron kolanka" id="makaron kolanka" class="product">
+                            <label class="form-check-label" for="makaron kolanka">makaron kolanka</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron lasagne" id="makaron lasagne" class="product">
+                            <label class="form-check-label" for="makaron lasagne">makaron lasagne</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron łazanki" id="makaron łazanki" class="product">
+                            <label class="form-check-label" for="makaron łazanki">makaron łazanki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron nitki" id="makaron nitki" class="product">
+                            <label class="form-check-label" for="makaron nitki">makaron nitki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron penne" id="makaron penne" class="product">
+                            <label class="form-check-label" for="makaron penne">makaron penne</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="makaron spaghetti" id="makaron spaghetti" class="product">
+                            <label class="form-check-label" for="makaron spaghetti">makaron spaghetti</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="masło orzechowe" id="masło orzechowe" class="product">
+                            <label class="form-check-label" for="masło orzechowe">masło orzechowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="miód" id="miód" class="product">
+                            <label class="form-check-label" for="miód">miód</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="natka pietruszki" id="natka pietruszki" class="product">
+                            <label class="form-check-label" for="natka pietruszki">natka pietruszki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="orzechy włoskie" id="orzechy włoskie" class="product">
+                            <label class="form-check-label" for="orzechy włoskie">orzechy włoskie</label>
+                        </div>   
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="orzeszki piniowe" id="orzeszki piniowe" class="product">
+                            <label class="form-check-label" for="orzeszki piniowe">orzeszki piniowe</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="orzeszki ziemne" id="orzeszki ziemne" class="product">
+                            <label class="form-check-label" for="orzeszki ziemne">orzeszki ziemne</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="owoc jałowca" id="owoc jałowca" class="product">
+                            <label class="form-check-label" for="owoc jałowca">owoc jałowca</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pasta gochujang" id="pasta gochujang" class="product">
+                            <label class="form-check-label" for="pasta gochujang">pasta gochujang</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pestki dyni" id="pestki dyni" class="product">
+                            <label class="form-check-label" for="pestki dyni">pestki dyni</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pestki słonecznika" id="pestki słonecznika" class="product">
+                            <label class="form-check-label" for="pestki słonecznika">pestki słonecznika</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="pita" id="pita" class="product">
+                            <label class="form-check-label" for="pita">pita</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="rodzynki" id="rodzynki" class="product">
+                            <label class="form-check-label" for="rodzynki">rodzynki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="rozmaryn" id="rozmaryn" class="product">
+                            <label class="form-check-label" for="rozmaryn">rozmaryn</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="salsa" id="salsa" class="product">
+                            <label class="form-check-label" for="salsa">salsa</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="grzanki" id="grzanki" class="product">
+                            <label class="form-check-label" for="grzanki">grzanki</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="tortilla" id="tortilla" class="product">
+                            <label class="form-check-label" for="tortilla">tortilla</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="tymianek" id="tymianek" class="product">
+                            <label class="form-check-label" for="tymianek">tymianek</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="wanilia" id="wanilia" class="product">
+                            <label class="form-check-label" for="wanilia">wanilia</label>
+                        </div>
+                        <div class="form-check product-check">
+                            <input class="form-check-input" type="checkbox" value="ziele angielskie" id="ziele angielskie" class="product">
+                            <label class="form-check-label" for="ziele angielskie">ziele angielskie</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="text-center" style="background-color: hsl(160, 3%, 20%); color:white">
+            <h1>Wybierz kategorię przepisów</h1>
+        </section>
+        <!-- Recipe display section -->
+        <div class="tabs1">
+            <div class="tab1 first-tab1 active" onclick="filterRecipes('all')" data-icon="📃"><span>Wszystkie 📃</span></div>
+            <div class="tab1" onclick="filterRecipes('sniadanie')" data-icon="🍳"><span>Śniadania 🍳</span></div>
+            <div class="tab1" onclick="filterRecipes('obiad')" data-icon="🍲"><span>Obiady 🍲</span></div>
+            <div class="tab1" onclick="filterRecipes('przekaska')" data-icon="🌭"><span>Przekąski i fast food 🌭</span></div>
+            <div class="tab1" onclick="filterRecipes('dodatek')" data-icon="🥗"><span>Dodatki 🥗</span></div>
+            <div class="tab1" onclick="filterRecipes('slodkosc')" data-icon="🧁"><span>Słodkości 🧁</span></div>
+        </div>
+        <section class="custom-section shadow">
+            <div class="content">
+                <h4 class="pb-4" style="color: white">Przepisy</h4>
+            </div>
+            <div id="recipes" class="mt-4"></div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div><img src="logo/logo0.png" height="25px" class="mb-2"></div>
+                    <span class="mx-1">&middot;</span>
+                    <a>Wykonał Hubert Jędruchniewicz</a>
+                    <span class="mx-1">&middot;</span>
+                    <div>&copy; Koodly 2024. Wszelkie prawa zastrzeżone.</div> 
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="recipes.js"></script>
+        <script src="assets/aos/aos.js"></script>
+        <script>AOS.init();</script>
+        <script>
+            // Funkcja do zapisywania stanu checkboxów
+            function saveCheckboxState() {
+                const checkboxes = document.querySelectorAll('.form-check-input');
+                const state = {};
+                checkboxes.forEach(checkbox => {
+                    state[checkbox.value] = checkbox.checked;
+                });
+                localStorage.setItem('checkboxState', JSON.stringify(state));
+            }
+    
+            // Funkcja do przywracania stanu checkboxów
+            function restoreCheckboxState() {
+                const state = JSON.parse(localStorage.getItem('checkboxState'));
+                if (state) {
+                    const checkboxes = document.querySelectorAll('.form-check-input');
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = state[checkbox.value] || false; // Przywróć stan lub ustaw na false
+                    });
+                }
+            }
+    
+            // Wywołaj restoreCheckboxState po załadowaniu strony
+            window.onload = function() {
+                restoreCheckboxState();
+                filterRecipes('all');
+    
+                // Dodaj zdarzenie zmiany do checkboxów, aby zapisywać ich stan
+                const checkboxes = document.querySelectorAll('.form-check-input');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', saveCheckboxState);
+                });
+            };
+        </script>        
+    </body>
+</html>

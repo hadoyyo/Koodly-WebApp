@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Koodly - Przepis</title>
+        <link rel="icon" href="/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="assets/aos/aos.css" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-light fixed-top shadow-lg" id="mainNav">
+            <div class="container px-5">
+                <a class="navbar-brand fw-bold" href="index.html"><img id="logo" src="" height="45px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:rgb(41, 204, 87)">
+                    Menu
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item" onclick="goBack()"><button class="nav-link me-lg-3"><i class="bi bi-arrow-left"></i> Powrót</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="text-center" style="background-color: hsl(160, 3%, 20%); color:white;">
+        </section>
+        <section class="shadow custom-section-recipe" data-aos="zoom-in" data-aos-duration="800">
+            <div class="container p-4">
+                <h1 id="recipe-title" class="text-center mb-4"></h1>
+                <div class="row">
+                    <div class="col-md-6 recipe-left">
+                        <h3>Składniki:</h3>
+                        <ul id="recipe-ingredients"></ul>
+                        <br>
+                        <h3>Składniki opcjonalne:</h3>
+                        <p id="recipe-optional"></p>
+                    </div>
+                    <div class="col-md-6 recipe-right">
+                        <img id="recipe-image" alt="Przepis" class="img-fluid shadow"/>
+                    </div>
+                </div>
+                <h3 class="mt-4">Instrukcje:</h3>
+                <p id="recipe-instructions"></p>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div><img src="logo/logo0.png" height="25px" class="mb-2"></div>
+                    <span class="mx-1">&middot;</span>
+                    <a>Wykonał Hubert Jędruchniewicz</a>
+                    <span class="mx-1">&middot;</span>
+                    <div>&copy; Koodly 2024. Wszelkie prawa zastrzeżone.</div> 
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="recipes.js"></script>
+        <script src="assets/aos/aos.js"></script>
+        <script>AOS.init();</script>
+        
+    </body>
+</html>
