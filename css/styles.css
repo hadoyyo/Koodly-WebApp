@@ -11529,6 +11529,7 @@ ul {
   border-bottom-color: rgb(107,116,124);
   border-width: 1px;
   transition: 0.3s;
+  color:rgb(107,116,124);
 }
 
 .search-container:hover .bi-search {
