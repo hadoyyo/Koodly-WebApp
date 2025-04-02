@@ -962,6 +962,7 @@
             <h1 data-aos="zoom-in" data-aos-duration="1000">Wybierz kategorię przepisów</h1>
         </section>
         <!-- Recipe display section -->
+        <div data-aos="fade-down" data-aos-duration="800">
         <div class="tabs1">
             <div class="tab1 first-tab1 active" onclick="filterRecipes('all')" data-icon="📃" data-aos="fade-down" data-aos-duration="1000"><span>Wszystkie 📃</span></div>
             <div class="tab1" onclick="filterRecipes('sniadanie')" data-icon="🍳" data-aos="fade-down" data-aos-duration="1200"><span>Śniadania 🍳</span></div>
@@ -970,12 +971,13 @@
             <div class="tab1" onclick="filterRecipes('dodatek')" data-icon="🥗" data-aos="fade-down" data-aos-duration="1800"><span>Dodatki 🥗</span></div>
             <div class="tab1" onclick="filterRecipes('slodkosc')" data-icon="🧁" data-aos="fade-down" data-aos-duration="2000"><span>Słodkości 🧁</span></div>
         </div>
-        <section class="custom-section shadow" data-aos="fade-down" data-aos-duration="800">
+        <section class="custom-section shadow">
             <div class="content">
                 <h4 class="pb-4" style="color: white">Przepisy</h4>
             </div>
             <div id="recipes" class="mt-4"></div>
         </section>
+        </div>
 
         <!-- Footer-->
         <footer class="text-center py-5">
