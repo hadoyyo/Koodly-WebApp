@@ -57,4 +57,4 @@ Software versions used for development (**compatibility with earlier versions ha
   <img src="./ss/ss4.png"/>
 </div>
 ### Mobile Device
-
+<img src="./ss/ss5.jpg" width="49%"/> <img src="./ss/ss6.jpg" width="49%"/>
