@@ -1,7 +1,7 @@
 # Koodly - Web Application
 
 <div align="center">
-  <img width="50%" src="./ss/logo.png"/>
+  <img width="40%" src="./ss/logo.png"/>
 </div>
 
 ## Table of Contents
