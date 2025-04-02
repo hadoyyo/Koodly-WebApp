@@ -49,3 +49,10 @@ Software versions used for development (**compatibility with earlier versions ha
 2. Open the index.html file.
 
 ## Screenshots
+
+<div align="center">
+  <img src="./ss/ss1.png"/>
+  <img src="./ss/ss2.png"/>
+  <img src="./ss/ss3.png"/>
+  <img src="./ss/ss4.png"/>
+</div>
