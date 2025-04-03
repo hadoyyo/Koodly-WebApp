@@ -25,7 +25,7 @@
 - ⏱️ Counting for each recipe the number of matching and missing ingredients 
 - 📖 Ability to preview all recipes
 
-**Owner**
+**Administrator**
 - ➕ Easy addition of new recipes and ingredients
 
 **Other features**
