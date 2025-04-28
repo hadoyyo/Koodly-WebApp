@@ -49,8 +49,8 @@ Software versions used for development:
 
 ## Setup Instructions
 
-1. Download this repository.
-2. Open the index.html file.
+1. Download and extract this repository.
+2. Open the `index.html` file.
 
 ## Screenshots
 
