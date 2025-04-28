@@ -14,7 +14,9 @@
 
 ## Project Overview
 
-**Koodly** is a web application that allows you to find the right recipe based on the ingredients you have on hand. **The website is only available in Polish language version!**
+**Koodly** is a web application that allows you to find the right recipe based on the ingredients you have on hand. 
+> [!NOTE]  
+> The website is only available in Polish language version!
 
 ## Features
 
@@ -40,8 +42,10 @@
 - JavaScript
 
 ## Requirements
-Software versions used for development (**compatibility with earlier versions has not been tested**):
+Software versions used for development:
 - Bootstrap 5.0
+> [!WARNING]  
+> Compatibility with earlier versions has not been tested.
 
 ## Setup Instructions
 
